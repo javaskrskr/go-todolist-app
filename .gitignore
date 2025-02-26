@@ -1,0 +1,8 @@
+touch .gitignore
+echo "bin/
+pkg/
+*.exe
+*.out
+*.log
+.env
+vendor/" >> .gitignore
