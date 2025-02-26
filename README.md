@@ -97,10 +97,18 @@ Can be used only within that block
 - To make variable accessbile in other packages, you must export it by capitaliing first letter
 - Can be used everywhere aceoss all package
 
-# API 
+# Build 
+- `go mod init github.com/<USERNAME>/<REPO_NAME>` >>> make the init of the module and its dependencies, the built will have the same name as that
+- `go build` >>> make binary file 
+- `go build && ./<binary_file>` >>> run the build 
 
+# Commands
+- `go mod vendor` >>> make local copy of the module
 
-
+# Env
+```bash
+PORT=3000
+```
 
 
 
