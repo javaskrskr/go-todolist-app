@@ -104,7 +104,70 @@ Can be used only within that block
 
 # Commands
 - `go mod vendor` >>> make local copy of the module
+# Go Program Structure
+- package main >>> allow go to know we want to run this code as standalone program, not like JS, import the the lib at the first time
+- import "fmt" >>> import the formatting package from the standard lib
+- func main() >>> definition of the main function, entry point for Go
 
+# Go Bugs
+- compilation error, during the compilation, it blocks the resulting executable
+- run time error, during the program is running, crash or behave iunexpectedly
+
+# What is Go
+- language that compile directly to machine code, make the program becomes faster than interpreted program
+- beating the JS, Python, Ruby
+- lower than Rust, Zig and C
+
+# Go Type Size 
+- whole numbers (no decimal): int int8 int16 int32 int64
+- positive whole numbers (no decimal): uint uint8 uint16 uint32 uint64 uintptr >>> unsigned integer
+- signed decimal numbers: float32 float64
+- imaginary numbers: complex64 complex128 >>> rarely used
+- size (aka the number after the data_type) >>> tells us how many bits in memory will be used
+- standard size usage: int uint float64 complex128
+- type convertion: casting, truncate the rest of the data, like from 88.26 casts as int64, the floating point will be gone
+
+# How to choose the type
+- use the default type, like the type we defined is not the same as the type we are trying to input, cast into int from uint16
+- deafult types: bool, string, int, uint, byte, rune, float64, complex128
+
+# Go is statically typed
+- types are known before the code runs
+- type error will be thrown before the code is run
+
+# Compiled Program
+- the one we can run without original source code >>> compiled program
+- no need compiler after it is done its job
+- download the exe and we can run it
+- only the comiled executable runs in production non compiler required
+- run the compiled program, users need compiled executable
+- GO, C, C++, Rust
+
+# Interpreted Program
+- code is interpreted at runtime by another program
+- end user need interpreter so they can run the code
+- code and interpreter required in production
+- JS, Python, Ruby
+
+# Single Line Declarations
+- mileage, company := 802, "Hello"
+
+# Small Memory Footpring
+- lightweight
+- program need small amount extra code, included in the executable binary >>> go runtime
+- we need go run, to clean up the unused memory = garbage collector, free up memory which is no longer in use
+- compare to java and go, go need more memory, cause the java is using virtual machine to interpret bytecode at runtime, make it allocating more heap
+- and rust and c use less memory, due to that program allows developer to handle the memory usage, but go handles it auto
+
+# What is heap
+- memoery will be taken up: new variales...
+- stack memory, store the LOCAL variables
+- heap memory, DYNAMIC for programmer to allocate
+- data: store global varaible >>> uninit and init data
+- text: store the code being executed
+- address location, stack > heap > data > text
+- address with base 16 numbers
+- 
 # Env
 ```bash
 PORT=3000
